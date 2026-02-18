@@ -25,8 +25,8 @@ import Nav from './Nav.astro';
     <div class="hero-right">
       <div class="hero-photo-wrap">
         <img
-          src="/images/profile.jpg"
-          alt="Isabel Hankes — mountain meadow at sunset"
+          src="/images/hero-profile.jpg"
+          alt="Isabel Hankes"
           class="hero-photo"
           width="340"
           height="340"
@@ -35,7 +35,9 @@ import Nav from './Nav.astro';
       </div>
 
       <div class="hero-deco" aria-hidden="true">
-        <span>✦</span><span>✧</span><span>✦</span>
+        <span class="deco-emoji deco-mountain">⛰️</span>
+        <span class="deco-emoji deco-puzzle">🧩</span>
+        <span class="deco-emoji deco-keyboard">⌨️</span>
       </div>
     </div>
 
@@ -117,6 +119,7 @@ import Nav from './Nav.astro';
     align-items: center;
     gap: 1.5rem;
     padding-left: 4rem;
+    position: relative;
   }
 
   .hero-photo-wrap {
@@ -136,12 +139,40 @@ import Nav from './Nav.astro';
   }
 
   .hero-deco {
-    display: flex;
-    gap: 0.75rem;
-    font-size: 0.65rem;
-    color: var(--light-blue);
-    opacity: 0.5;
-    letter-spacing: 0.5rem;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .deco-emoji {
+    position: absolute;
+    font-size: 2rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  }
+
+  /* Upper-right of circle */
+  .deco-mountain {
+    top: 8%;
+    right: 4%;
+    transform: rotate(8deg);
+    font-size: 2.2rem;
+  }
+
+  /* Lower-right of circle */
+  .deco-puzzle {
+    bottom: 22%;
+    right: 2%;
+    transform: rotate(-6deg);
+    font-size: 1.9rem;
+  }
+
+  /* Lower-left of circle */
+  .deco-keyboard {
+    bottom: 18%;
+    left: 4%;
+    transform: rotate(5deg);
+    font-size: 1.8rem;
   }
 
   /* ── Mobile ── */
@@ -182,6 +213,10 @@ import Nav from './Nav.astro';
 
     .hero-text {
       align-items: center;
+    }
+
+    .hero-deco {
+      display: none;
     }
   }
 
