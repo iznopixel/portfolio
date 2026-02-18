@@ -1,0 +1,91 @@
+---
+---
+
+<section class="about grainy" aria-labelledby="about-heading">
+  <div class="container about-inner">
+
+    <div class="about-roles">
+      <span class="label role-chip">Product Engineer</span>
+      <span class="role-separator" aria-hidden="true">/</span>
+      <span class="label role-chip">Frontend Lead</span>
+    </div>
+
+    <div class="about-bio">
+      <p>
+        Building intuitive software end-to-end is what I do best! From defining
+        the problem to shipping scalable solutions, I've got a sharp product
+        sense, a strong Angular expertise, and a relentless focus on eliminating
+        friction.
+      </p>
+      <p>
+        Driven by a passion for mentoring and empowering others. As a team lead
+        and product owner, I've balanced the management of other engineers with
+        my own individual contributions, always keeping the user's experience at
+        the center of every decision.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--slate);
+  }
+
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-roles {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 0.25rem;
+  }
+
+  .role-chip {
+    color: var(--pale-cyan);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+  }
+
+  .role-separator {
+    color: var(--light-blue);
+    opacity: 0.4;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    line-height: 1;
+  }
+
+  .about-bio {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-bio p {
+    font-family: var(--font-ui);
+    font-size: clamp(0.9rem, 1.3vw, 1.02rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.75;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 767px) {
+    .about-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-roles {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,110 @@
+---
+---
+
+<section id="contact" class="contact grainy" aria-labelledby="contact-heading">
+  <div class="container contact-inner">
+
+    <div class="contact-left">
+      <h2 id="contact-heading" class="display contact-heading">Let's<br />connect</h2>
+    </div>
+
+    <div class="contact-right">
+      <p class="contact-body">
+        Reach out so we can nerd out over the solution you're building to see
+        how I can help! You'll find I'm a pragmatic problem solver with a love
+        for alliteration and all the basic hobbies of the Rockies (skiing,
+        climbing, camping, you name it).
+      </p>
+
+      <div class="contact-buttons">
+        <a
+          href="https://drive.google.com/file/d/16R1IwDzf4Az7-SaGUTOULKCSzhupyoEI/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+        >
+          Full Resume
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/im-hankes/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+        >
+          LinkedIn
+        </a>
+
+        <a href="mailto:hankesisa@gmail.com" class="btn">
+          Email me
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .contact {
+    background-color: var(--slate);
+  }
+
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-heading {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    color: var(--cream);
+    line-height: 1.0;
+  }
+
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .contact-body {
+    font-family: var(--font-ui);
+    font-size: clamp(0.9rem, 1.3vw, 1rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.75;
+    max-width: 58ch;
+  }
+
+  .contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Slight slate tint on the buttons so they read on the bg */
+  .contact .btn {
+    border-color: rgba(249, 247, 240, 0.55);
+    color: var(--cream);
+    font-size: 0.72rem;
+  }
+
+  .contact .btn:hover {
+    background: var(--cream);
+    color: var(--slate);
+    border-color: var(--cream);
+  }
+
+  @media (max-width: 767px) {
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .contact-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

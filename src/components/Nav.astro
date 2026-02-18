@@ -1,0 +1,31 @@
+---
+// Nav is rendered inside the Hero section to overlay on the dark bg
+---
+
+<nav class="nav">
+  <a href="#showcase" class="nav-link">Showcase</a>
+  <a href="#contact" class="nav-link">Contact</a>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--cream);
+  }
+</style>

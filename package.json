@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/open-sans": "^5.2.7",
+    "@fontsource/open-sans": "^5.2.7",
+    "@fontsource/roboto-mono": "^5.2.8",
+    "astro": "^5.17.2"
+  }
+}
