@@ -1,0 +1,47 @@
+---
+---
+
+<section class="claude-banner grainy" aria-label="Claude Code">
+  <div class="container banner-inner">
+    <p class="banner-text display">
+      Ask me how I'm using&nbsp;<span class="banner-accent">Claude&nbsp;Code</span> to quickly craft quality features
+    </p>
+  </div>
+</section>
+
+<style>
+  .claude-banner {
+    background-color: var(--black);
+    padding-top: clamp(3.5rem, 7vw, 6rem);
+    padding-bottom: clamp(3.5rem, 7vw, 6rem);
+    background-image: radial-gradient(
+      ellipse 80% 60% at 50% 50%,
+      rgba(14, 164, 155, 0.08) 0%,
+      transparent 70%
+    );
+  }
+
+  .banner-inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .banner-text {
+    font-size: clamp(1.6rem, 3.5vw, 3rem);
+    color: var(--cream);
+    max-width: 22ch;
+    line-height: 1.2;
+    opacity: 0.9;
+  }
+
+  .banner-accent {
+    color: var(--teal);
+  }
+
+  @media (max-width: 767px) {
+    .banner-text {
+      max-width: 28ch;
+    }
+  }
+</style>

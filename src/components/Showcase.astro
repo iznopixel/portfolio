@@ -1,0 +1,105 @@
+---
+import ShowcaseCard from './ShowcaseCard.astro';
+
+const projects = [
+  {
+    title: 'query wizard',
+    description:
+      'Simplify Elasticsearch & Opensearch queries with an interface to generate QueryDSL in a few clicks.',
+    link: 'https://www.youtube.com/watch?v=mDJR6RBlbO4',
+    linkLabel: 'Watch the demo',
+    comingSoon: false,
+  },
+  {
+    title: 'Performance insights',
+    description:
+      'Pinpoint usage & inefficiencies in backend logic to quickly address the problem in the function stack.',
+    comingSoon: true,
+  },
+  {
+    title: 'Workspace Search',
+    description:
+      'Reduced search churn to under 10% so users can instantly navigate to what they need in seconds.',
+    link: 'https://www.youtube.com/watch?v=HpwGjPciHEo',
+    linkLabel: 'Watch the demo',
+    comingSoon: false,
+  },
+  {
+    title: 'Database copilot',
+    description:
+      'Empower builders to manage their database via chat interface while ensuring safety & clarity.',
+    comingSoon: true,
+  },
+] as const;
+---
+
+<section id="showcase" class="showcase grainy" aria-labelledby="showcase-heading">
+  <div class="container">
+
+    <div class="showcase-header">
+      <h2 id="showcase-heading" class="display showcase-title">Showcase</h2>
+      <p class="showcase-sub">
+        Features I've shipped at Xano, from start to finish.<br />
+        Iterating from an idea to an intuitive interface.
+      </p>
+    </div>
+
+    <div class="showcase-grid">
+      {projects.map((project) => (
+        <ShowcaseCard {...project} />
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .showcase {
+    background-color: var(--navy);
+  }
+
+  .showcase-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .showcase-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    color: var(--cream);
+  }
+
+  .showcase-sub {
+    font-family: var(--font-ui);
+    font-size: clamp(0.85rem, 1.3vw, 0.97rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 55ch;
+  }
+
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 767px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .showcase-header {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .showcase-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+  }
+</style>
